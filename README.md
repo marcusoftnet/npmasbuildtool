@@ -1,0 +1,1 @@
+Small test utility for npm scripting
