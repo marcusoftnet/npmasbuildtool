@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test -u bdd -R spec",
+    "test:deploy" : "npm t -- -R dot",
     "start": "node index.js",
     "start:dev": "node index.js 4000",
     "lint": "jshint --exclude ./lib/*.js *.js **/*.js",
@@ -31,7 +32,17 @@
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
     "push:origin" : "git push --tags origin HEAD:master",
-    "push:heroku" : "git push heroku master"
+    "push:heroku" : "git push heroku master",
+    "push" : "npm run push:origin && npm run push:origin",
+    "launch:prod" : "heroku open",
+    "external:script" : "bash ./aLongComplicatedScript.sh",
+    "test:options": "mocha",
+    "test:configoptions" : "mocha test --reporter $npm_package_config_reporter",
+    "test:configoptions:json" : "npm run test:configoptions --stupidlittlewebsite:reporter=json",
+    "deploy:prod" : "npm run test:deploy && npm run build && npm run version:minor && npm run version && npm run launch:prod"
+  },
+  "config": {
+    "reporter": "landing"
   },
   "jshintConfig": {
     "esnext": "true",
