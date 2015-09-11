@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.7.0",
+  "version": "1.6.0",
   "description": "Small test utility for npm scripting",
   "main": "index.js",
   "scripts": {
@@ -31,9 +31,9 @@
     "version:major": "npm version major",
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
-    "prepush:origin": "echo 'Pushing code to GitHub'",
+    "prepush:origin": "echo '#####>Pushing code to GitHub'",
     "push:origin": "git push --tags origin HEAD:master",
-    "prepush:heroku": "echo 'Pushing code to Heroku'",
+    "prepush:heroku": "echo '#####>Pushing code to Heroku'",
     "push:heroku": "git push heroku master",
     "push": "npm run push:origin && npm run push:origin",
     "launch:prod": "heroku open",
