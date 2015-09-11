@@ -39,7 +39,7 @@
     "test:options": "mocha",
     "test:configoptions": "mocha test --reporter $npm_package_config_reporter",
     "test:configoptions:json": "npm run test:configoptions --stupidlittlewebsite:reporter=json",
-    "deploy:prod": "npm run test:deploy && npm run build && npm run version:minor && npm run version && npm run launch:prod"
+    "deploy:prod": "npm run test:deploy && npm run build && npm run version:minor && npm run launch:prod"
   },
   "config": {
     "reporter": "landing"
