@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Small test utility for npm scripting",
   "main": "index.js",
   "scripts": {
@@ -39,9 +39,8 @@
     "test:options": "mocha",
     "test:configoptions": "mocha test --reporter $npm_package_config_reporter",
     "test:configoptions:json": "npm run test:configoptions --stupidlittlewebsite:reporter=json",
-    "deploy:prod": "npm run test:deploy && npm run build && npm run version:minor && npm run push && npm run launch:prod",
     "deploy:prod": "bash ./deployProd.sh",
-    "deploy:prod:time" : "time(npm run deploy:prod)"
+    "deploy:prod:time": "time(npm run deploy:prod)"
   },
   "config": {
     "reporter": "landing"
