@@ -60,5 +60,9 @@
     "uglifyjs": "^2.4.10",
     "watch": "^0.16.0",
     "watchify": "^3.4.0"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "."
   }
 }
