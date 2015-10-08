@@ -1,3 +1,6 @@
+# Stupid little website
+A demo utility for PluralSight course on npm scripting. 
+
 # How to start
 
 * Go to this folder in Terminal

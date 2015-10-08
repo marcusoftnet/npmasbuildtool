@@ -1,4 +1,6 @@
-# Created by https://www.gitignore.io/api/node,osx
+# Created by https://www.gitignore.io/api/x,node,osx
+
+#!! ERROR: x is undefined. Use list command to see defined gitignore types !!#
 
 ### Node ###
 # Logs
