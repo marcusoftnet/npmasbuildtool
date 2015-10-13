@@ -1,6 +1,6 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small demo site for our npm scripting adventures",
   "main": "index.js",
   "scripts": {
@@ -31,18 +31,18 @@
     "version:major": "npm version major",
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
-    "push:origin" : "git push --tags origin HEAD:master",
-    "push:heroku" : "git push heroku master",
-    "push:s3" : "s3-cli sync ./dist/ s3://example-com/prod-site/",
-    "push:azure" : "git push azure master",
-    "launch:prod" : "heroku open",
-    "launch:prod:windows" : "start https://stupidlittlewebsite.herokuapp.com/",
-    "deploy:prod" : "npm run test:deploy -s && npm run build -s && npm run version:patch",
-    "test:deploy" : "npm t -- -R dot"
+    "push:origin": "git push --tags origin HEAD:master",
+    "push:heroku": "git push heroku master",
+    "push:s3": "s3-cli sync ./dist/ s3://example-com/prod-site/",
+    "push:azure": "git push azure master",
+    "launch:prod": "heroku open",
+    "launch:prod:windows": "start https://stupidlittlewebsite.herokuapp.com/",
+    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch",
+    "test:deploy": "npm t -- -R dot"
   },
-  "engines" : {
-    "node" : "~4.0.0",
-    "npm" : "~2.14.0"
+  "engines": {
+    "node": "~4.0.0",
+    "npm": "~2.14.0"
   },
   "jshintConfig": {
     "esnext": "true",
