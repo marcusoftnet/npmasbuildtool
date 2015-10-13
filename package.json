@@ -37,7 +37,7 @@
     "push:azure": "git push azure master",
     "launch:prod": "heroku open",
     "launch:prod:windows": "start https://stupidlittlewebsite.herokuapp.com/",
-    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch",
+    "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push:origin && npm run push:heroku",
     "test:deploy": "npm t -- -R dot"
   },
   "engines": {
