@@ -1,3 +1,4 @@
 test
--u bdd 
--R dot
+--ui bdd 
+--reporter dot
+--recursive

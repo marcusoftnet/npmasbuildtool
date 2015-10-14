@@ -7,6 +7,7 @@
     "start": "node index.js",
     "start:dev": "node index.js 4000",
     "test": "mocha test -u bdd -R spec",
+    "test:options" : "mocha",
     "lint": "jshint --exclude ./lib/*.js *.js **/*.js",
     "pretest": "npm run compile && npm run lint",
     "compile:coffee": "coffee --compile --output ./lib ./src/coffeescripts",
@@ -31,7 +32,9 @@
     "version:major": "npm version major",
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
+    "prepush:origin" : "echo 'Pushing code to GitHub'",
     "push:origin": "git push --tags origin HEAD:master",
+    "prepush:heroku" : "echo 'Pushing code to Heroku'",
     "push:heroku": "git push heroku master",
     "push:s3": "s3-cli sync ./dist/ s3://example-com/prod-site/",
     "push:azure": "git push azure master",
@@ -41,7 +44,11 @@
     "deploy:prod": "npm run test:deploy -s && npm run build -s && npm run version:patch && npm run push && npm run launch:prod",
     "deploy:prod:time": "time(npm run deploy:prod)",
     "deploy:prod:script": "bash ./deployProd.sh",
-    "test:deploy": "npm t -- -R dot"
+    "test:deploy": "npm t -- -R dot",
+    "test:configoptions" : "mocha test --reporter $npm_package_config_reporter"
+  },
+  "config" : {
+    "reporter" : "landing"
   },
   "engines": {
     "node": "~4.0.0",
