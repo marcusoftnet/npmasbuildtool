@@ -1,11 +1,11 @@
 {
   "name": "stupidlittlewebsite",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "A small demo site for our npm scripting adventures",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "prestart" : "echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@SHOWS ON HEROKU?@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+    "prestart": "echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@SHOWS ON HEROKU?@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     "start:dev": "node index.js 4000",
     "test": "mocha test -u bdd -R spec",
     "test:options": "mocha",
@@ -21,7 +21,7 @@
     "build:clean": "rimraf public/css/*, public/js/*",
     "prebuild": "npm run build:clean",
     "build": "npm run build:less && npm run build:bundle",
-    "postbuild" : "echo 'Build succeeded!'",
+    "postbuild": "echo 'Build succeeded!'",
     "watch:test": "npm run test -- -w -R min",
     "watch:lint": "watch 'npm run lint' .",
     "watch:server": "nodemon --ignore client --ignore public index.js",
